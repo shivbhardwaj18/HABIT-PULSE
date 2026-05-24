@@ -153,13 +153,12 @@ npm run build
 
 # 📸 Screenshots
 
-> Add your screenshots here
 
-```md
+
 ![Adding Habits](./screenshots/add_habit.png)
 ![Habit Tracking](./screenshots/tracking.png)
 ![Chart View](./screenshots/chart.png)
-```
+
 
 ---
 
