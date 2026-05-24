@@ -156,9 +156,9 @@ npm run build
 > Add your screenshots here
 
 ```md
-![Home Page](./screenshots/home.png)
+![Adding Habits](./screenshots/add_habit.png)
+![Habit Tracking](./screenshots/tracking.png)
 ![Chart View](./screenshots/chart.png)
-![Habit Tracking](./screenshots/habits.png)
 ```
 
 ---
