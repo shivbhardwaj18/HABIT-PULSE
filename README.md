@@ -154,11 +154,29 @@ npm run build
 # 📸 Screenshots
 
 
+# 📸 Screenshots
 
-![Adding Habits](./screenshots/add_habit.png)
-![Habit Tracking](./screenshots/tracking.png)
-![Chart View](./screenshots/chart.png)
+## ➕ Adding Habits
 
+<p align="center">
+  <img src="./screenshots/add_habit.png" width="900"/>
+</p>
+
+---
+
+## ✅ Habit Tracking
+
+<p align="center">
+  <img src="./screenshots/tracking.png" width="900"/>
+</p>
+
+---
+
+## 📈 Consistency Chart
+
+<p align="center">
+  <img src="./screenshots/chart.png" width="900"/>
+</p>
 
 ---
 
