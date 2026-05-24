@@ -75,21 +75,36 @@ All habit data is stored directly in the browser using **localStorage**, making 
 # 📂 Project Structure
 
 ```bash
-HabitPulse/
+habit-tracker/
+│
+├── public/
+│   └── vite.svg
+│
+├── screenshots/
+│   ├── add_habit.png
+│   ├── tracking.png
+│   └── chart.png
 │
 ├── src/
+│   ├── assets/
+│   │
 │   ├── components/
 │   │   ├── HabitForm.jsx
 │   │   ├── HabitGrid.jsx
 │   │   └── ProgressChart.jsx
 │   │
 │   ├── App.jsx
-│   ├── main.jsx
-│   └── styles.css
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
 │
-├── public/
+├── .gitignore
+├── eslint.config.js
+├── index.html
 ├── package.json
-└── vite.config.js
+├── package-lock.json
+├── vite.config.js
+└── README.md
 ```
 
 ### Component Overview
