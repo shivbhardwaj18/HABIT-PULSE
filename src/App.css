@@ -1,0 +1,203 @@
+:root {
+  --primary: #6366f1; /* Indigo 500 */
+  --primary-dark: #4f46e5;
+  --danger: #ef4444;
+  --success: #10b981;
+  --bg-gradient: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --text-main: #1e293b;
+  --text-light: #64748b;
+  --border: #e2e8f0;
+  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', 'Inter', sans-serif; /* Recommend importing a nice font */
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  color: var(--text-main);
+}
+
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* --- Card Styling --- */
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 1.5rem 0;
+  background: linear-gradient(to right, #6366f1, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- Form Section --- */
+.controls-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-light);
+}
+
+input, select {
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.2s;
+  background: #f8fafc;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.add-btn {
+  background: var(--primary);
+  color: white;
+  padding: 0.9rem 1.5rem;
+}
+.add-btn:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+.reset-btn {
+  background: #cbd5e1;
+  color: var(--text-main);
+  padding: 0.9rem 1.5rem;
+}
+.reset-btn:hover { background: #94a3b8; color: white; }
+
+/* --- Table & Sticky Columns --- */
+.table-container {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate; /* Required for sticky to work well with borders */
+  border-spacing: 0;
+  min-width: 800px;
+}
+
+th, td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+/* Sticky Column Logic */
+th:first-child, td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  background: var(--card-bg); /* Match card background so text doesn't show through */
+  border-right: 2px solid var(--border); /* Visual separator */
+  text-align: left;
+  min-width: 200px;
+  max-width: 200px;
+}
+
+/* Header Specifics */
+th {
+  background: #f1f5f9;
+  font-weight: 700;
+  color: var(--text-light);
+}
+th:first-child {
+  z-index: 20; /* Ensure corner stays on top */
+  background: #f1f5f9;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+  width: 1.4rem;
+  height: 1.4rem;
+  accent-color: var(--success);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+input[type="checkbox"]:hover { transform: scale(1.2); }
+
+/* --- Habit Actions (Edit/Delete) --- */
+.habit-cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.habit-name-text {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.action-btn-group {
+  display: flex;
+  gap: 4px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.habit-cell:hover .action-btn-group { opacity: 1; }
+
+.icon-btn {
+  padding: 4px;
+  background: transparent;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+.icon-btn.edit:hover { background: #e0e7ff; color: var(--primary); }
+.icon-btn.delete:hover { background: #fee2e2; color: var(--danger); }
+
+.edit-input {
+  width: 100%;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+}

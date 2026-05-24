@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, Arial;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: white;
+  color: #333;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.task-input {
+  display: flex;
+  gap: 10px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.task-input button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+}
+
+.task-list {
+  margin-top: 15px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f4f6ff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.task.done span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task button {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  color: red;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.empty {
+  text-align: center;
+  color: gray;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
