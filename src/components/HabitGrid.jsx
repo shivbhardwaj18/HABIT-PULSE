@@ -87,11 +87,13 @@ const HabitGrid = ({ habits, days, history, onToggle, onDelete, onEdit }) => {
                     const isCompleted = history[habit.id]?.[day] || false;
                     return (
                       <td key={`${habit.id}-${day}`}>
-                        <input
-                          type="checkbox"
-                          checked={isCompleted}
-                          onChange={() => onToggle(habit.id, day)}
-                        />
+                        <label className="checkbox-container">
+                          <input
+                            type="checkbox"
+                            checked={isCompleted}
+                            onChange={() => onToggle(habit.id, day)}
+                          />
+                        </label>
                       </td>
                     );
                   })}

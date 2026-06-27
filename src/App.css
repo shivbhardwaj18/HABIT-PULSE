@@ -155,14 +155,27 @@ th:first-child {
 }
 
 /* Checkboxes */
-input[type="checkbox"] {
+.checkbox-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
   width: 1.4rem;
   height: 1.4rem;
   accent-color: var(--success);
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
+  margin: 0;
 }
-input[type="checkbox"]:hover { transform: scale(1.2); }
+
+.checkbox-container:hover input[type="checkbox"] {
+  transform: scale(1.2);
+}
 
 /* --- Habit Actions (Edit/Delete) --- */
 .habit-cell {
