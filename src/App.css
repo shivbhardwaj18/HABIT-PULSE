@@ -171,6 +171,7 @@ th:first-child {
   cursor: pointer;
   transition: transform 0.2s ease;
   margin: 0;
+  pointer-events: none; /* Prevents browser-native hover/flicker conflicts */
 }
 
 .checkbox-container:hover input[type="checkbox"] {
